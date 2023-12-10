@@ -1,12 +1,18 @@
 def main():
-    string  = input("enter a string: ")
+    string  = input()
     check(string)
 
 def check(string):
-    for i in range(len(string)-4):
-       if string[i:i+5] == "hello":
-           print("YES")
-           return
-    print("NO")
-    
+    hello = "hello"
+    i=0
+    for letter in string:
+        if letter == hello[i]:
+            if i == 4:
+                print("YES",end='')
+                return
+            i+=1
+
+    print("NO",end='')
+
+
 main()

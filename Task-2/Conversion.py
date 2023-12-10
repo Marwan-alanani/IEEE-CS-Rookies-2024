@@ -1,2 +1,2 @@
-string = input("Enter a string: ")
-print(string.replace(","," ").swapcase())
+string = input()
+print(string.replace(","," ").swapcase(),end='')

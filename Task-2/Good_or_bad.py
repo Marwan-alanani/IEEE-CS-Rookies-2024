@@ -1,15 +1,18 @@
 def main():
-    test_cases = int(input("enter no of test cases: "))
+    test_cases = int(input())
+    tests = []
     for _ in range(test_cases):
-        string = input("Enter a string: ")
+        string = input()
+        tests.append(string)
+    for string in tests:
         check(string)
-        
+        print()
 
 def check(string):
     for i in range((len(string)-2)):
         if string[i:i+3] == "101" or string[i:i+3] == "010":
-            print("Good")
+            print("Good",end='')
             return
-    print("Bad")
+    print("Bad",end='')
 
 main()
