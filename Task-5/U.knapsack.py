@@ -13,12 +13,12 @@ def main():
 
 
 
-def getMaxValue(W,N):
+def getMaxValue(W,N,currentWeight=0):
     global WeightValues
-
+    # if knapsack is currently full or we have checked all possiblities up to N starting from i
     if W==0 or N==0:
         return 0
-    
+    # if weight of any element is bigger than the general capacity or the remaining capacity check element after it
     if WeightValues[N-1][0] > W:
         return getMaxValue(W,N-1)
     

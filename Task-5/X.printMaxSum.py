@@ -8,6 +8,7 @@ def main():
 
 def getSum(rows,cols,i=0,j=0):
     global matrix
+    
     # bottom right reached
     if i==rows-1 and j==cols-1:
         return matrix[i][j]
